@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ThomRepo — Dropshipping Premium</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="#">THOM<span>REPO</span></a>
+    <nav class="nav">
+      <a href="#produtos">Produtos</a>
+      <a href="#vantagens">Vantagens</a>
+      <a href="#admin">Painel</a>
+    </nav>
+    <button class="cart-btn" id="openCart">Carrinho <span id="cartCount">0</span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <p class="eyebrow">Curadoria premium de produtos</p>
+      <h1>Produtos selecionados para vender mais.</h1>
+      <p class="lead">Uma loja moderna de dropshipping: catálogo elegante, carrinho rápido e pedidos enviados direto para o WhatsApp.</p>
+      <a class="btn primary" href="#produtos">Ver produtos</a>
+      <a class="btn ghost" href="#admin">Cadastrar produto</a>
+    </div>
+    <div class="hero-card">
+      <div class="glow"></div>
+      <strong>Loja pronta para personalizar</strong>
+      <p>Altere produtos, preços, imagens e WhatsApp no painel. Os dados ficam salvos no navegador.</p>
+    </div>
+  </div>
+</section>
+
+<section id="produtos" class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Catálogo</h2>
+      <input id="search" placeholder="Buscar produto...">
+      <select id="category">
+        <option value="">Todas as categorias</option>
+      </select>
+    </div>
+    <div id="grid" class="grid"></div>
+  </div>
+</section>
+
+<section id="vantagens" class="section dark">
+  <div class="container features">
+    <div><h3>Envio direto</h3><p>Pedidos organizados e enviados ao fornecedor.</p></div>
+    <div><h3>Design premium</h3><p>Visual sofisticado e responsivo.</p></div>
+    <div><h3>Checkout WhatsApp</h3><p>O cliente finaliza a compra pelo WhatsApp.</p></div>
+  </div>
+</section>
+
+<section id="admin" class="section">
+  <div class="container admin">
+    <h2>Painel do lojista</h2>
+    <form id="productForm" class="form">
+      <input id="pName" placeholder="Nome do produto" required>
+      <input id="pPrice" type="number" step="0.01" placeholder="Preço de venda" required>
+      <input id="pCost" type="number" step="0.01" placeholder="Custo do fornecedor">
+      <input id="pImage" placeholder="URL da imagem">
+      <input id="pCategory" placeholder="Categoria">
+      <button class="btn primary">Salvar produto</button>
+    </form>
+    <div id="adminList"></div>
+  </div>
+</section>
+
+<aside id="cart" class="cart">
+  <div class="cart-head"><h3>Seu carrinho</h3><button id="closeCart">×</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-total">Total: <span id="cartTotal">R$ 0,00</span></div>
+  <button id="checkout" class="btn primary full">Finalizar no WhatsApp</button>
+</aside>
+
+<footer class="footer">© <span id="year"></span> ThomRepo — Loja de dropshipping.</footer>
+<script src="app.js"></script>
+</body>
+</html>
